@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Alambrados Pilar - La Lonja</title>
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+
+    header,
+    footer {
+      background-color: #004d00;
+      /* Verde oscuro */
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      /* color: white; */
+      /* font-size: 2.5em; */
+      /* font-weight: 700; */
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #004b34;
+      /* Verde oscuro */
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    nav a:hover {
+      text-decoration: none;
+      color: #101110;
+    }
+
+    .hero {
+      /* Ajusta la URL según tu imagen */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+      margin: 10px 0 0;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: white;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #inicio {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      background-color: #004b34;
+    }
+
+    header h1 {
+      font-family: 'Archivo', sans-serif;
+      /* font-variant: small-caps; */
+      font-size: 3rem;
+      text-shadow: 1px 2px 5px #000f00;
+      font-weight: 900;
+    }
+
+    h2 {
+      color: #006400;
+      /* Verde oscuro */
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin: 0 0 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    label {
+      margin-top: 10px;
+      font-weight: 700;
+    }
+
+    input,
+    select,
+    textarea {
+      margin-top: 5px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #006400;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #004d00;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 5px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer p {
+      margin: 10px 0 0;
+      font-size: 0.9em;
+    }
+
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    /*whatsapp*/
+    .whatsapp-icon img {
+      width: 60px;
+      height: 60px;
+    }
+
+    /* carousel */
+    .parallax-container {
+      height: 40vw;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .parallax-container img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 2s ease;
+      opacity: 1;
+    }
+
+    .parallax-container img.hidden {
+
+      opacity: 0;
+    }
+
+    #pres {
+      max-width: 80vw;
+      padding-left: 5vw;
+      font-family: 'Archivo', sans-serif;
+      font-size: 1.2rem;
+      color: #dfdfdf;
+      line-height: 1.5;
+      font-variant: small-caps;
+      font-weight: 600;
+    }
+
+    #ubicacion {
+      margin: 10px 20px 10px 20px;
+      padding: 10px 20px 10px 20px;
+
+    }
+
+    a img {
+      text-decoration: none;
+      color: white;
+    }
+
+    .seccion-fija {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .titulo {
+      
+      font-family: 'Bodonio', serif;
+      font-size: 4rem;
+
+    }
+
+    .subt {
+      font-family: 'Roboto', sans-serif;
+      color: black;
+      font-weight: 900;
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+
+    .text {
+      font-family: 'Helvetica', sans-serif;
+      text-align: justify;
+      padding: 0 3rem 0 3rem;
+    }
+
+    .copy {
+      align-content: flex-end;
+    }
+
+    footer {
+      font-size: 0.8rem;
+      text-align: center;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1 class="titulo">ALAMBRADOS PILAR</h1> 
+    <h2 class="subt"> LA LONJA</h2>
+
+  </header>
+
+  <nav>
+    <a href="#hero">Inicio</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="#ubicacion">Contacto</a>
+    <a href="#cercos">Cercos</a>
+    <a href="#alambrados">Alambrados</a>
+    <a href="#portones">Portones</a>
+  </nav>
+
+  <div class="hero">
+    <!-- <h2>Bienvenidos a Alambrados Pilar La Lonja</h2>
+    <p>Expertos en alambrados y cerramientos perimetrales</p> -->
+    <div class="parallax-container">
+      <img src="img/Alambrados/alambr.jpeg" class="parallax-image active" alt="...">
+      <img src="img/Cercos/medianera44.jpeg" class="parallax-image hidden" alt="...">
+      <img src="img/Cerramientos/cerramien.jpeg" class="parallax-image hidden" alt="...">
+
+    </div>
+  </div>
+
+  <section id="inicio">
+    <!-- <h2>NUESTROS SERVICIOS</h2> -->
+    <div id="pres"></div>
+    <div id="previa" style="display: none;">
+      <p>Con 20 años de experiencia y trayectoria en el rubro, ofrecemos los mejores servicios de alambrados y
+        cerramientos perimetrales.<br>
+        Responsabilidad, prolijidad, buena atención y el mejor precio del mercado nos caracterizan.</p>
+    </div>
+  </section>
+
+  <section id="ubicacion">
+    <div class="row">
+      <div class="col-6">
+        <h2>Ubicación</h2>
+        <p class="text">Nos encontramos en Av. Cayetano Veliera 4788 km 46.200 de la ex Ruta 8. Barrio La Lonja. Pilar
+        </p>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1644.9801022906363!2d-58.83119382421992!3d-34.45315806076686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9c1d0aacbdf9%3A0x5c1740f1a22da4a4!2sAv.%20Sgto.%20Cayetano%20Beliera%204788%2C%20La%20Lonja%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1722286332270!5m2!1ses-419!2sar"
+          width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-6">
+
+        <h2>Contacto</h2>
+        <form>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Teléfono:</label>
+          <input type="tel" id="phone" name="phone" required>
+
+          <label for="service">Motivo del Contacto:</label>
+          <select id="service" name="service">
+            <option value="alambrado">Alambrado</option>
+            <option value="cercado">Cercado</option>
+            <option value="puertas">Puertas</option>
+            <option value="portones">Portones</option>
+            <option value="otros">Otros</option>
+          </select>
+
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+        <p>Teléfono: 11-2710-0151</p>
+      </div>
+
+    </div>
+
+
+
+
+  </section>
+
+  <section id="cercos">
+    <h2>Cercos</h2>
+    <p>Ofrecemos una amplia variedad de cercos perimetrales y para piletas, con materiales de alta calidad y diseño
+      personalizado.</p>
+    <div class="gallery">
+      <img src="img/Cercos/cercoalamb.jpeg" alt="Cerco Perimetral">
+      <img src="img/Cercos/piletalambra.jpeg" alt="Cerco para Piletas">
+    </div>
+  </section>
+
+  <section id="alambrados">
+    <h2>Alambrados</h2>
+    <p>Nuestros alambrados incluyen opciones olímpicas y de campo, ideales para seguridad y delimitación de espacios.
+    </p>
+    <div class="gallery">
+      <img src="img/Alambrados/alam.jpeg" alt="Alambrado Olímpico">
+      <img src="img/Alambrados/alambrados.jpeg" alt="Alambrado de Campo">
+    </div>
+  </section>
+
+  <section id="portones">
+    <h2>Portones</h2>
+    <p>Fabricamos y colocamos puertas y portones de caño y madera, adaptados a las necesidades específicas de cada
+      cliente.</p>
+    <div class="gallery">
+      <img src="img/Portones/portonmader.jpeg" alt="Portón de Caño">
+      <img src="img/Portones/portonalam.jpeg" alt="Portón de Madera">
+    </div>
+  </section>
+
+  <footer>
+    <div class="row">
+      <div class="col-4 text-start">
+        <i class="fa-solid fa-house"></i>&ensp; Av. Cayetano Veliera 4788. Barrio La Lonja. Pilar<br>
+        <i class="fa-solid fa-phone"></i>&ensp;Consultas 11 2710-0151<br>
+        <i class="fa-brands fa-instagram"></i>&ensp;<i class="fa-brands fa-facebook"></i>&ensp;<i
+          class="fa-brands fa-twitter"></i>
+      </div>
+
+      <div class="col-5 copy">
+        <span class="text-center">&copy 2024 - Alambrados Pilar La Lonja  - Todos los derechos reservados</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/1127100151" class="whatsapp-icon" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = document.querySelectorAll('.parallax-image');
+      let currentImageIndex = 0;
+
+      setInterval(() => {
+        images[currentImageIndex].classList.remove('active');
+        images[currentImageIndex].classList.add('hidden');
+
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        images[currentImageIndex].classList.remove('hidden');
+        images[currentImageIndex].classList.add('active')
+      }, 5000);
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const textToType = document.getElementById('previa').textContent;
+      const typedContent = document.getElementById('pres');
+      let index = 0;
+      const typingSpeed = 50; // Velocidad de escritura en milisegundos
+
+      function type() {
+        if (index < textToType.length) {
+          typedContent.textContent += textToType.charAt(index);
+          index++;
+          requestAnimationFrame(type);
+        }
+      }
+
+      function startTyping() {
+        setTimeout(type, typingSpeed);
+      }
+
+      startTyping();
+    });
+  </script>
+  <script>
+    ScrollReveal().reveal('#ubicacion', { duration: 1000, origin: 'bottom', distance: '50px' });
+    ScrollReveal().reveal('#contacto', { duration: 1000, origin: 'left', distance: '50px' });
+    ScrollReveal().reveal('#inicio', { duration: 1000, origin: 'left', distance: '50px' });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
