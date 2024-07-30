@@ -24,8 +24,9 @@
       background-color: #f4f4f4;
     }
 
-    header,
+    #header,
     footer {
+      border-radius: 0;
       background-color: #004d00;
       /* Verde oscuro */
       color: white;
@@ -95,12 +96,37 @@
       background-color: #004b34;
     }
 
-    header h1 {
-      font-family: 'Archivo', sans-serif;
-      /* font-variant: small-caps; */
+    #header {
+      margin: 0;
+      padding: 0;
+      height: 12vw;
+      
+    }
+
+    /* #header h1 {
+      /* font-family: 'Archivo', sans-serif; */
+      /* font-variant: small-caps; 
       font-size: 3rem;
-      text-shadow: 1px 2px 5px #000f00;
+      
+      } */
+      
+      .titulo {
       font-weight: 900;
+      margin: 2vw 0 0 1vw;
+      font-family: 'Bodonio', serif;
+      font-size: 4rem;
+      text-shadow: 1px 2px 5px #000f00;
+      
+    }
+    
+    .subt {
+      text-shadow: 1px 2px 2px #000f00;
+      margin-left: 1vw;
+      font-family: 'Archivo', sans-serif;
+      color: rgb(15, 15, 15);
+      font-weight: 800;
+      font-size: 3rem;
+      margin-bottom: 0;
     }
 
     h2 {
@@ -248,20 +274,6 @@
       z-index: -1;
     }
 
-    .titulo {
-      
-      font-family: 'Bodonio', serif;
-      font-size: 4rem;
-
-    }
-
-    .subt {
-      font-family: 'Roboto', sans-serif;
-      color: black;
-      font-weight: 900;
-      font-size: 3rem;
-      margin-bottom: 0;
-    }
 
     .text {
       font-family: 'Helvetica', sans-serif;
@@ -278,17 +290,29 @@
       text-align: center;
 
     }
+
+    .imgban {
+      height: 100%;
+      opacity: 0.015;
+      /* color: inherit; */
+      /* object-fit: cover; */
+      margin: 0;
+      
+    }
   </style>
 </head>
 
 <body>
+  <section id="header">
+    <div class="row">
+      <div class="col-12 col-md-8 text-start">
+        <h1 class="titulo">ALAMBRADOS PILAR</h1>
+        <h2 class="subt"> LA LONJA</h2>
+      </div>
+      <div class="col-12 col-md-3 p-0 m-0"><img class="imgban" src="img/alam.png" alt=""></div>
+    </div>
 
-  <header>
-    <h1 class="titulo">ALAMBRADOS PILAR</h1> 
-    <h2 class="subt"> LA LONJA</h2>
-
-  </header>
-
+  </section>
   <nav>
     <a href="#hero">Inicio</a>
     <a href="#ubicacion">Ubicación</a>
@@ -408,7 +432,7 @@
       </div>
 
       <div class="col-5 copy">
-        <span class="text-center">&copy 2024 - Alambrados Pilar La Lonja  - Todos los derechos reservados</span>
+        <span class="text-center">&copy 2024 - Alambrados Pilar La Lonja - Todos los derechos reservados</span>
       </div>
     </div>
   </footer>
