@@ -436,7 +436,7 @@
       const textToType = document.getElementById('previa').textContent;
       const typedContent = document.getElementById('pres');
       let index = 0;
-      const typingSpeed = 50; // Velocidad de escritura en milisegundos
+      const typingSpeed = 40; // Velocidad de escritura en milisegundos
 
       function type() {
         if (index < textToType.length) {
@@ -455,8 +455,10 @@
   </script>
   <script>
     ScrollReveal().reveal('#ubicacion', { duration: 1000, origin: 'bottom', distance: '50px' });
-    ScrollReveal().reveal('#contacto', { duration: 1000, origin: 'left', distance: '50px' });
-    ScrollReveal().reveal('#inicio', { duration: 1000, origin: 'left', distance: '50px' });
+    ScrollReveal().reveal('#cercos', { duration: 1000, origin: 'bottom', distance: '50px' });
+    ScrollReveal().reveal('#alambrados', { duration: 1000, origin: 'bottom', distance: '50px' });
+    ScrollReveal().reveal('#portones', { duration: 1000, origin: 'bottom', distance: '50px' });
+    ScrollReveal().reveal('#hero', { duration: 1000, origin: 'left', distance: '50px' });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
