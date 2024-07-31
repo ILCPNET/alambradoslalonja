@@ -112,21 +112,31 @@
       
       .titulo {
       font-weight: 900;
-      margin: 2vw 0 0 1vw;
-      font-family: 'Bodonio', serif;
-      font-size: 4rem;
+      padding-top: 2vw;
+      padding-left: 2vw;
+      font-family: 'Imprint Mt shadow', sans-serif;
+      font-size: 3.8rem;
       text-shadow: 1px 2px 5px #000f00;
-      
+      letter-spacing: 1.5px;
+      font-weight: 300;
+    }
+    .pilar{
+      font-family: 'Gill Sans', sans-serif;
+      color: black;
+      font-weight: 900;
+      text-shadow: none;
+      font-size: 3.7rem;
     }
     
     .subt {
       text-shadow: 1px 2px 2px #000f00;
-      margin-left: 1vw;
+      /* padding-left: 5vw; */
       font-family: 'Archivo', sans-serif;
-      color: rgb(15, 15, 15);
+      color: rgb(2, 2, 2);
       font-weight: 800;
-      font-size: 3rem;
-      margin-bottom: 0;
+      font-size: 3.5rem;
+      /* padding-bottom: 15rem; */
+      /* margin-bottom: 5vw; */
     }
 
     h2 {
@@ -278,7 +288,7 @@
     .text {
       font-family: 'Helvetica', sans-serif;
       text-align: justify;
-      padding: 0 3rem 0 3rem;
+      padding: 1rem 3rem 0 3rem;
     }
 
     .copy {
@@ -288,16 +298,31 @@
     footer {
       font-size: 0.8rem;
       text-align: center;
-
+      padding: 1vw;
     }
 
     .imgban {
-      height: 100%;
-      opacity: 0.015;
+      position: absolute;
+      width: 400px;
+      opacity: 0.025;
+      top: 0;
+      right: 0;
       /* color: inherit; */
-      /* object-fit: cover; */
+      object-fit: cover;
       margin: 0;
       
+    }
+    .banner{
+      display: block;
+      position: relative;
+    }
+    #navegacion{
+      margin: 0 !important;
+      top: 0 !important;
+      padding: 0 !important;
+      left: 0 !important;
+      z-index: 1;
+      box-shadow: 0 2px 5px black;
     }
   </style>
 </head>
@@ -305,14 +330,14 @@
 <body>
   <section id="header">
     <div class="row">
-      <div class="col-12 col-md-8 text-start">
-        <h1 class="titulo">ALAMBRADOS PILAR</h1>
-        <h2 class="subt"> LA LONJA</h2>
+      <div class="text-start banner">
+        <h1 class="titulo">ALAMBRADOS <!--<span class="pilar">-->PILAR<!--</span>--><span class="subt"> - LA LONJA</span></h1>
       </div>
-      <div class="col-12 col-md-3 p-0 m-0"><img class="imgban" src="img/alam.png" alt=""></div>
+      <div class=""><img class="imgban" src="img/alam.png" alt=""></div>
     </div>
 
   </section>
+  <section id="navegacion">
   <nav>
     <a href="#hero">Inicio</a>
     <a href="#ubicacion">Ubicación</a>
@@ -321,7 +346,7 @@
     <a href="#alambrados">Alambrados</a>
     <a href="#portones">Portones</a>
   </nav>
-
+</section>
   <div class="hero">
     <!-- <h2>Bienvenidos a Alambrados Pilar La Lonja</h2>
     <p>Expertos en alambrados y cerramientos perimetrales</p> -->
