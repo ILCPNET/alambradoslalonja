@@ -42,25 +42,35 @@
     }
 
     nav {
-      display: flex;
+      /* display: flex; */
       justify-content: center;
-      background-color: #004b34;
+      background-color: #08330b;
       /* Verde oscuro */
       padding: 10px 0;
     }
 
     nav a {
+      font-family: 'Raleway', sans-serif;
       color: white;
       text-decoration: none;
       margin: 0 15px;
-      font-weight: bold;
+      font-weight: 500;
       font-size: 1.2em;
+      /* font-variant: small-caps; */
+      letter-spacing: 1px;
     }
 
     nav a:hover {
       text-decoration: none;
-      color: #101110;
+      /* color: #101110; */
+      /* border: 0.4px solid rgba(255, 255, 255, 0.424); */
+      box-shadow: 10px, 4px, 2px #01c407;
+      /* border-radius: 50px; */
+      color: #4cb35a;
+      /* padding: 0.7rem; */
+      /* margin:2px; */
     }
+    
 
     .hero {
       /* Ajusta la URL según tu imagen */
@@ -112,7 +122,7 @@
       
       .titulo {
       font-weight: 900;
-      padding-top: 2vw;
+      padding-top: 3vw;
       padding-left: 2vw;
       font-family: 'Imprint Mt shadow', sans-serif;
       font-size: 3.8rem;
@@ -255,13 +265,14 @@
 
     #pres {
       max-width: 80vw;
+      height: 5rem;
       padding-left: 5vw;
-      font-family: 'Archivo', sans-serif;
+      font-family: 'Aileron', sans-serif;
       font-size: 1.2rem;
-      color: #dfdfdf;
+      color: #33ad81;
       line-height: 1.5;
-      font-variant: small-caps;
-      font-weight: 600;
+      text-transform: uppercase;
+      font-weight: 400;
     }
 
     #ubicacion {
@@ -313,8 +324,9 @@
       
     }
     .banner{
-      display: block;
+      display: inline;
       position: relative;
+      
     }
     #navegacion{
       margin: 0 !important;
@@ -345,6 +357,7 @@
     <a href="#cercos">Cercos</a>
     <a href="#alambrados">Alambrados</a>
     <a href="#portones">Portones</a>
+    <a href="#piletas">Piletas</a>
   </nav>
 </section>
   <div class="hero">
@@ -372,7 +385,7 @@
     <div class="row">
       <div class="col-6">
         <h2>Ubicación</h2>
-        <p class="text">Nos encontramos en Av. Cayetano Veliera 4788 km 46.200 de la ex Ruta 8. Barrio La Lonja. Pilar
+        <p class="text">Nos encontramos en Av. Cayetano Beliera 4788 km 46.200 de la ex Ruta 8. Barrio La Lonja. Pilar
         </p>
 
         <iframe
@@ -411,15 +424,10 @@
       </div>
 
     </div>
-
-
-
-
   </section>
-
   <section id="cercos">
     <h2>Cercos</h2>
-    <p>Ofrecemos una amplia variedad de cercos perimetrales y para piletas, con materiales de alta calidad y diseño
+    <p>Ofrecemos una amplia variedad de cercos perimetrales con materiales de alta calidad y diseño
       personalizado.</p>
     <div class="gallery">
       <img src="img/Cercos/cercoalamb.jpeg" alt="Cerco Perimetral">
@@ -436,7 +444,10 @@
       <img src="img/Alambrados/alambrados.jpeg" alt="Alambrado de Campo">
     </div>
   </section>
-
+  <section id="piletas">
+    <h2>Piletas</h2>
+    <p>Realizamos perimetrales para piletas</p>
+  </section>
   <section id="portones">
     <h2>Portones</h2>
     <p>Fabricamos y colocamos puertas y portones de caño y madera, adaptados a las necesidades específicas de cada
@@ -450,7 +461,7 @@
   <footer>
     <div class="row">
       <div class="col-4 text-start">
-        <i class="fa-solid fa-house"></i>&ensp; Av. Cayetano Veliera 4788. Barrio La Lonja. Pilar<br>
+        <i class="fa-solid fa-house"></i>&ensp; Av. Cayetano Beliera 4788. Barrio La Lonja. Pilar<br>
         <i class="fa-solid fa-phone"></i>&ensp;Consultas 11 2710-0151<br>
         <i class="fa-brands fa-instagram"></i>&ensp;<i class="fa-brands fa-facebook"></i>&ensp;<i
           class="fa-brands fa-twitter"></i>
