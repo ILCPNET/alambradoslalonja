@@ -64,7 +64,7 @@
       text-decoration: none;
       /* color: #101110; */
       /* border: 0.4px solid rgba(255, 255, 255, 0.424); */
-      box-shadow: 10px, 4px, 2px #01c407;
+      box-shadow: 10px, 4px, 2px #004d00;
       /* border-radius: 50px; */
       color: #4cb35a;
       /* padding: 0.7rem; */
@@ -315,13 +315,13 @@
     .imgban {
       position: absolute;
       width: 400px;
-      opacity: 0.025;
+      opacity: 1;
       top: 0;
       right: 0;
       /* color: inherit; */
       object-fit: cover;
       margin: 0;
-      
+      z-index:-1 ;
     }
     .banner{
       display: inline;
@@ -335,6 +335,16 @@
       left: 0 !important;
       z-index: 1;
       box-shadow: 0 2px 5px black;
+    }
+    .contacto{
+      padding: 0 5rem 0 5rem;
+      font-family: 'Aileron', sans-serif;
+      letter-spacing: 1.5px;
+    }
+    select{
+      letter-spacing: 2px;
+      font-family: 'Aileron', sans-serif;
+
     }
   </style>
 </head>
@@ -393,7 +403,7 @@
           width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <div class="col-6">
+      <div class="col-6 contacto">
 
         <h2>Contacto</h2>
         <form>
@@ -408,10 +418,12 @@
 
           <label for="service">Motivo del Contacto:</label>
           <select id="service" name="service">
+            <option value="seleccione">Seleccione una opcion...</option>
             <option value="alambrado">Alambrado</option>
             <option value="cercado">Cercado</option>
             <option value="puertas">Puertas</option>
             <option value="portones">Portones</option>
+            <option value="piletas">Piletas</option>
             <option value="otros">Otros</option>
           </select>
 
@@ -420,7 +432,7 @@
 
           <button type="submit">Enviar</button>
         </form>
-        <p>Teléfono: 11-2710-0151</p>
+        <p><i class="fa-solid fa-phone mt-4"></i>&ensp;Teléfono: 11-2710-0151</p>
       </div>
 
     </div>
