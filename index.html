@@ -70,7 +70,7 @@
       /* padding: 0.7rem; */
       /* margin:2px; */
     }
-    
+
 
     .hero {
       /* Ajusta la URL según tu imagen */
@@ -101,26 +101,28 @@
     }
 
     #inicio {
+      height: 8rem;
       margin-top: 20px;
       margin-bottom: 10px;
-      background-color: #004b34;
+      background-color: #004b1d;
+      padding: 1rem 0 2rem 0 !important;
     }
 
     #header {
       margin: 0;
       padding: 0;
       height: 12vw;
-      
+
     }
 
     /* #header h1 {
       /* font-family: 'Archivo', sans-serif; */
-      /* font-variant: small-caps; 
+    /* font-variant: small-caps; 
       font-size: 3rem;
       
       } */
-      
-      .titulo {
+
+    .titulo {
       font-weight: 900;
       padding-top: 3vw;
       padding-left: 2vw;
@@ -130,14 +132,15 @@
       letter-spacing: 1.5px;
       font-weight: 300;
     }
-    .pilar{
+
+    .pilar {
       font-family: 'Gill Sans', sans-serif;
       color: black;
       font-weight: 900;
       text-shadow: none;
       font-size: 3.7rem;
     }
-    
+
     .subt {
       text-shadow: 1px 2px 2px #000f00;
       /* padding-left: 5vw; */
@@ -264,14 +267,14 @@
     }
 
     #pres {
-      max-width: 80vw;
-      height: 5rem;
-      padding-left: 5vw;
+
+      padding: 0 5rem 0 5rem;
       font-family: 'Aileron', sans-serif;
-      font-size: 1.2rem;
-      color: #33ad81;
-      line-height: 1.5;
-      text-transform: uppercase;
+      font-size: 1.5rem;
+      color: #52ca52;
+      line-height: 1.3;
+      text-transform: normal;
+      text-align: justify;
       font-weight: 400;
     }
 
@@ -321,14 +324,16 @@
       /* color: inherit; */
       object-fit: cover;
       margin: 0;
-      z-index:-1 ;
+      z-index: -1;
     }
-    .banner{
+
+    .banner {
       display: inline;
       position: relative;
-      
+
     }
-    #navegacion{
+
+    #navegacion {
       margin: 0 !important;
       top: 0 !important;
       padding: 0 !important;
@@ -336,15 +341,66 @@
       z-index: 1;
       box-shadow: 0 2px 5px black;
     }
-    .contacto{
+
+    .contacto {
       padding: 0 5rem 0 5rem;
       font-family: 'Aileron', sans-serif;
       letter-spacing: 1.5px;
     }
-    select{
+
+    select {
       letter-spacing: 2px;
       font-family: 'Aileron', sans-serif;
 
+    }
+
+    /*CALECITA*/
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel {
+      margin-top: 5vw;
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
+      height: 60vh;
+      gap: 10px;
+      overflow: hidden;
+    }
+
+    .carousel img {
+      flex: 0 0 auto;
+      height: auto;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1px !important;
+      transition: transform 0.3s ease;
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .carousel-button.prev {
+      left: 10px;
+    }
+
+    .carousel-button.next {
+      right: 10px;
     }
   </style>
 </head>
@@ -353,23 +409,24 @@
   <section id="header">
     <div class="row">
       <div class="text-start banner">
-        <h1 class="titulo">ALAMBRADOS <!--<span class="pilar">-->PILAR<!--</span>--><span class="subt"> &ensp;LA LONJA</span></h1>
+        <h1 class="titulo">ALAMBRADOS <!--<span class="pilar">-->PILAR<!--</span>--><span class="subt"> &ensp;LA
+            LONJA</span></h1>
+        <div class=""><img class="imgban" src="img/alam.png" alt=""></div>
       </div>
-      <div class=""><img class="imgban" src="img/alam.png" alt=""></div>
     </div>
 
   </section>
   <section id="navegacion">
-  <nav>
-    <a href="#hero">Inicio</a>
-    <a href="#ubicacion">Ubicación</a>
-    <a href="#ubicacion">Contacto</a>
-    <a href="#cercos">Cercos</a>
-    <a href="#alambrados">Alambrados</a>
-    <a href="#portones">Portones</a>
-    <a href="#piletas">Piletas</a>
-  </nav>
-</section>
+    <nav>
+      <a href="#hero">Inicio</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#ubicacion">Contacto</a>
+      <a href="#cercos">Cercos</a>
+      <a href="#alambrados">Alambrados</a>
+      <a href="#portones">Portones</a>
+      <a href="#piletas">Piletas</a>
+    </nav>
+  </section>
   <div class="hero">
     <!-- <h2>Bienvenidos a Alambrados Pilar La Lonja</h2>
     <p>Expertos en alambrados y cerramientos perimetrales</p> -->
@@ -441,9 +498,36 @@
     <h2>Cercos</h2>
     <p>Ofrecemos una amplia variedad de cercos perimetrales con materiales de alta calidad y diseño
       personalizado.</p>
-    <div class="gallery">
-      <img src="img/Cercos/cercoalamb.jpeg" alt="Cerco Perimetral">
-      <img src="img/Cercos/piletalambra.jpeg" alt="Cerco para Piletas">
+    <div class="carousel-container fade-in">
+      <button class="carousel-button prev">&lt;</button>
+      <div class="carousel">
+        <img src="img/Cercos/cercoalamb.jpeg" alt="">
+        <img src="img/Cercos/cerco.jpeg" alt="">
+        <img src="img/Cercos/cerco1.jpeg" alt="">
+        <img src="img/Cercos/medianera.jpeg" alt="">
+        <img src="img/Cercos/medianera1.jpeg" alt="">
+        <img src="img/Cercos/medianera11.jpeg" alt="">
+        <img src="img/Cercos/medianera33.jpeg" alt="">
+        <img src="img/Cercos/medianera44.jpeg" alt="">
+        <img src="img/Cercos/medianera444.jpeg" alt="">
+        <img src="img/Cercos/medianera6.jpeg" alt="">
+        <img src="img/Cercos/medianera66.jpeg" alt="">
+        <img src="img/Cercos/medianera7.jpeg" alt="">
+        <img src="img/Cercos/medianera9.jpeg" alt="">
+        <img src="img/Cercos/WhatsApp Image 2024-06-13 at 12.12.28.jpeg" alt="">
+        <img src="img/Cercos/WhatsApp Image 2024-06-13 at 12.12.30 (1).jpeg" alt="">
+        <img src="img/Cercos/WhatsApp Image 2024-06-13 at 12.12.31 (3).jpeg" alt="">
+        <img src="img/Cercos/WhatsApp Image 2024-06-13 at 12.12.40 (3).jpeg" alt="">
+        <img src="img/Cercos/WhatsApp Image 2024-06-13 at 12.12.40 (4).jpeg" alt="">
+        <img src="img/Cercos/WhatsApp Image 2024-06-13 at 12.12.40.jpeg" alt="">
+        <img src="img/Cercos/WhatsApp Image 2024-06-13 at 12.12.41.jpeg" alt="">
+        <img src="img/Cercos/WhatsApp Image 2024-06-13 at 12.12.41 (1).jpeg" alt="">
+        <img src="img/Cercos/WhatsApp Image 2024-06-13 at 12.13.42 (1).jpeg" alt="">
+        <img src="img/Cercos/WhatsApp Image 2024-06-13 at 12.13.42.jpeg" alt="">
+        <img src="img/Cercos/WhatsApp Image 2024-06-13 at 12.13.43 (2).jpeg" alt="">
+        <img src="img/Cercos/WhatsApp Image 2024-06-13 at 12.13.43 (3).jpeg" alt="">
+      </div>
+      <button class="carousel-button next">&gt;</button>
     </div>
   </section>
 
@@ -451,22 +535,98 @@
     <h2>Alambrados</h2>
     <p>Nuestros alambrados incluyen opciones olímpicas y de campo, ideales para seguridad y delimitación de espacios.
     </p>
-    <div class="gallery">
-      <img src="img/Alambrados/alam.jpeg" alt="Alambrado Olímpico">
-      <img src="img/Alambrados/alambrados.jpeg" alt="Alambrado de Campo">
+    <div class="carousel-container fade-in">
+      <button class="carousel-button prev">&lt;</button>
+      <div class="carousel">
+        <img src="img/Alambrados/alam.jpeg" alt="Alambrado Olímpico">
+        <img src="img/Alambrados/alambrados.jpeg" alt="Alambrado de Campo">
+        <img src="img/Alambrados/alamb.jpeg" alt="">
+        <img src="img/Alambrados/alambr.jpeg" alt="">
+        <img src="img/Alambrados/alambr88.jpeg" alt="">
+        <img src="img/Alambrados/alambra.jpeg" alt="">
+        <img src="img/Alambrados/alambra66.jpeg" alt="">
+        <img src="img/Alambrados/alambrad.jpeg" alt="">
+        <img src="img/Alambrados/alambrado.jpeg" alt="">
+        <img src="img/Alambrados/alambrado11.jpeg" alt="">
+        <img src="img/Alambrados/alambrado2.jpeg" alt="">
+        <img src="img/Alambrados/alambrado22.jpeg" alt="">
+        <img src="img/Alambrados/alambrado3.jpeg" alt="">
+        <img src="img/Alambrados/alambrado33.jpeg" alt="">
+        <img src="img/Alambrados/alambrado44.jpeg" alt="">
+        <img src="img/Alambrados/alambrado55.jpeg" alt="">
+        <img src="img/Alambrados/alambrado66.jpeg" alt="">
+        <img src="img/Alambrados/alambrado77.jpeg" alt="">
+        <img src="img/Alambrados/alambradomedianera.jpeg" alt="">
+        <img src="img/Alambrados/alambradoporton.jpeg" alt="">
+
+      </div>
+      <button class="carousel-button next">&gt;</button>
     </div>
   </section>
   <section id="piletas">
     <h2>Piletas</h2>
     <p>Realizamos perimetrales para piletas</p>
+    <div class="carousel-container fade-in">
+      <button class="carousel-button prev">&lt;</button>
+      <div class="carousel">
+        <img src="img/Piletas/alambr77.jpeg" alt="">
+        <img src="img/Piletas/cercopileta.jpeg" alt="">
+        <img src="img/Piletas/piletaalambrada.jpeg" alt="">
+        <img src="img/Piletas/piletalambra.jpeg" alt="">
+        <img src="img/Piletas/piletalambre.jpeg" alt="">
+        <img src="img/Piletas/WhatsApp Image 2024-06-13 at 12.12.25 (2).jpeg" alt="">
+        <img src="img/Piletas/WhatsApp Image 2024-06-13 at 12.12.38 (2).jpeg" alt="">
+        <img src="img/Piletas/WhatsApp Image 2024-06-13 at 12.13.43 (1).jpeg" alt="">
+        <img src="img/Piletas/WhatsApp Image 2024-06-13 at 12.13.44.jpeg" alt="">
+      </div>
+      <button class="carousel-button next">&gt;</button>
+    </div>
   </section>
   <section id="portones">
     <h2>Portones</h2>
     <p>Fabricamos y colocamos puertas y portones de caño y madera, adaptados a las necesidades específicas de cada
       cliente.</p>
-    <div class="gallery">
-      <img src="img/Portones/portonmader.jpeg" alt="Portón de Caño">
-      <img src="img/Portones/portonalam.jpeg" alt="Portón de Madera">
+    <div class="carousel-container fade-in">
+      <button class="carousel-button prev">&lt;</button>
+      <div class="carousel">
+        <img src="img/Portones/portonmader.jpeg" alt="Portón de Caño">
+        <img src="img/Portones/portonalam.jpeg" alt="Portón de Madera">
+        <img src="img/Portones/cerramient.jpeg" alt="">
+        <img src="img/Portones/cerramientomadera3.jpeg" alt="">
+        <img src="img/Portones/porton.jpeg" alt="">
+        <img src="img/Portones/portonalambre.jpeg" alt="">
+        <img src="img/Portones/portoncaño.jpeg" alt="">
+        <img src="img/Portones/portoncañoalam.jpeg" alt="">
+        <img src="img/Portones/portonmadera.jpeg" alt="">
+        <img src="img/Portones/portonmadera1.jpeg" alt="">
+        <img src="img/Portones/portonmadera2.jpeg" alt="">
+        <img src="img/Portones/portonmadera3.jpeg" alt="">
+        <img src="img/Portones/portonmaderagente.jpeg" alt="">
+        <img src="img/Portones/porttranquera.jpeg" alt="">
+        <img src="img/Portones/puertacañoalamb.jpeg" alt="">
+        <img src="img/Portones/puertalambre.jpeg" alt="">
+        <img src="img/Portones/puertamade.jpeg" alt="">
+        <img src="img/Portones/puertamadera.jpeg" alt="">
+        <img src="img/Portones/puertatranca.jpeg" alt="">
+        <img src="img/Portones/puertatranq.jpeg" alt="">
+        <img src="img/Portones/puertatranquera.jpeg" alt="">
+        <img src="img/Portones/puertmader.jpeg" alt="">
+        <img src="img/Portones/puertmader2.jpeg" alt="">
+        <img src="img/Portones/tranquera.jpeg" alt="">
+        <img src="img/Portones/WhatsApp Image 2024-06-13 at 12.12.24 (1).jpeg" alt="">
+        <img src="img/Portones/WhatsApp Image 2024-06-13 at 12.12.25 (1).jpeg" alt="">
+        <img src="img/Portones/WhatsApp Image 2024-06-13 at 12.12.25 (4).jpeg" alt="">
+        <img src="img/Portones/WhatsApp Image 2024-06-13 at 12.12.26 (1).jpeg" alt="">
+        <img src="img/Portones/WhatsApp Image 2024-06-13 at 12.12.26 (2).jpeg" alt="">
+        <img src="img/Portones/WhatsApp Image 2024-06-13 at 12.12.27.jpeg" alt="">
+        <img src="img/Portones/WhatsApp Image 2024-06-13 at 12.12.28 (2).jpeg" alt="">
+        <img src="img/Portones/WhatsApp Image 2024-06-13 at 12.12.28 (3).jpeg" alt="">
+        <img src="img/Portones/WhatsApp Image 2024-06-13 at 12.12.29 (2).jpeg" alt="">
+        <img src="img/Portones/WhatsApp Image 2024-06-13 at 12.12.29 (4).jpeg" alt="">
+        <img src="img/Portones/WhatsApp Image 2024-06-13 at 12.12.29.jpeg" alt="">
+        <img src="img/Portones/WhatsApp Image 2024-06-13 at 12.12.32.jpeg" alt="">
+      </div>
+      <button class="carousel-button next">&gt;</button>
     </div>
   </section>
 
@@ -523,6 +683,50 @@
       }
 
       startTyping();
+    });
+  </script>
+  <!-- CALECITA-->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const carousels = document.querySelectorAll('.carousel-container');
+
+      carousels.forEach((container) => {
+        const carousel = container.querySelector('.carousel');
+        const prevButton = container.querySelector('.carousel-button.prev');
+        const nextButton = container.querySelector('.carousel-button.next');
+        const images = container.querySelectorAll('.carousel img');
+        let currentIndex = 0;
+
+        function updateCarousel() {
+          const image = images[currentIndex];
+          carousel.scrollTo({
+            left: image.offsetLeft - (carousel.offsetWidth - image.offsetWidth) / 2,
+            behavior: 'smooth'
+          });
+        }
+
+        prevButton.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % images.length;
+          updateCarousel();
+        });
+
+        // carousel.addEventListener('wheel', (event) => {
+        //     event.preventDefault();
+        //     if (event.deltaY > 0) {
+        //         currentIndex = (currentIndex + 1) % images.length;
+        //     } else {
+        //         currentIndex = (currentIndex - 1 + images.length) % images.length;
+        //     }
+        //     updateCarousel();
+        // });
+
+        updateCarousel();
+      });
     });
   </script>
   <script>
