@@ -417,10 +417,13 @@ select {
 }
 
 @media (max-width: 576px) {
-
+  .titulo{
+    font-family: 'Imprint Mt shadow', sans-serif;
+  }
+  
   .titulo,
   .subt {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
 
   nav {
