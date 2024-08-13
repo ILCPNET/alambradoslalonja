@@ -420,7 +420,7 @@ select {
 
   .titulo,
   .subt {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   nav {
@@ -436,7 +436,7 @@ margin-top: 34vw;
   #pres{
     font-size: 0.9rem;
     padding: 0 0.5rem 0 0.5rem;
-    font-weight: 200;
+    font-weight: 300;
      }
   #inicio{
     padding: 0;
