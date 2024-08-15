@@ -24,7 +24,7 @@
         <div class="text-start banner">
           <h1 class="titulo">ALAMBRADOS PILAR<span class="subt"> &ensp;LA
               LONJA</span></h1>
-          
+
         </div>
       </div>
 
@@ -64,7 +64,7 @@
             Responsabilidad, prolijidad, buena atención y el mejor precio del mercado nos caracterizan.</p>
         </div>
       </div>
-      </section>
+    </section>
 
     <section id="ubicacion">
       <div class="row">
@@ -81,7 +81,7 @@
         <div class="col-12 col-md-6 contacto">
 
           <h2>Contacto</h2>
-          <form class="form">
+          <form class="form" onsubmit="sendEmail(); return false;">
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" required class="text-center>
 
@@ -282,6 +282,26 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
     <script>
+      function sendEmail() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var service = document.getElementById("service").value;
+        var message = document.getElementById("message").value;
+
+        var mailtoLink = "mailto:alambrados.pilar7881@hotmail.com" +
+          "?subject=" + encodeURIComponent("Consulta sobre " + service) +
+          "&body=" + encodeURIComponent("Nombre: " + name +
+            "\nCorreo: " + email +
+            "\nTeléfono: " + phone +
+            "\nMotivo: " + service +
+            "\nMensaje: " + message);
+
+        window.location.href = mailtoLink;
+      }
+    </script>
+    <script>
+
       document.addEventListener("DOMContentLoaded", function () {
         const images = document.querySelectorAll('.parallax-image');
         let currentImageIndex = 0;
