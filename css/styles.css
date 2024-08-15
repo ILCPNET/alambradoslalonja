@@ -295,7 +295,8 @@ a img {
 }
 
 .copy {
-  align-content: flex-end;
+  text-align: center;
+  justify-content: center;
 }
 
 footer {
