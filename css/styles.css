@@ -399,7 +399,8 @@ select {
 #cercos,
 #alambrados,
 #piletas,
-#portones {
+#portones,
+#empalizadas {
   background-color: #122c12;
   color: #ccc;
 }
@@ -407,7 +408,8 @@ select {
 #cercos h2,
 #alambrados h2,
 #piletas h2,
-#portones h2 {
+#portones h2,
+#empalizadas h2 {
   color: #ccc;
 }
 
@@ -417,31 +419,35 @@ select {
 }
 
 @media (max-width: 576px) {
-  .titulo{
+  .titulo {
     font-family: 'Imprint Mt shadow', sans-serif;
   }
-  
+
   .titulo,
   .subt {
     font-size: 1.35rem;
   }
 
   nav {
-flex-direction: column;
-}
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
 
   nav a {
     font-size: 0.8rem;
   }
-  .hero{
-margin-top: 34vw;
+
+  .hero {
+    margin-top: 40vw;
   }
-  #pres{
+
+  #pres {
     font-size: 0.9rem;
     padding: 0 0.5rem 0 0.5rem;
     font-weight: 300;
-     }
-  #inicio{
+  }
+
+  #inicio {
     padding: 0;
     margin: 1rem;
   }
